@@ -24,18 +24,17 @@ const texts = [
   }
 ];
 
-
 const BackgroundSlider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [animate, setAnimate] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setAnimate(false); // əvvəl animasiyanı sıfırla
+      setAnimate(false);
       setTimeout(() => {
         setCurrentIndex(prev => (prev + 1) % images.length);
-        setAnimate(true); // yeni yazını animasiya et
-      }, 100); // qısa gecikmə ilə dəyiş
+        setAnimate(true);
+      }, 100);
     }, 3000);
 
     return () => clearInterval(interval);
@@ -46,7 +45,7 @@ const BackgroundSlider = () => {
       {images.map((img, index) => (
         <div
           key={index}
-          className={`absolute w-full h-full bg-cover bg-center transition-opacity duration-1500 ease-in-out ${
+          className={`absolute w-full h-full bg-cover bg-center transition-opacity duration-[1500ms] ease-in-out ${
             index === currentIndex ? 'opacity-100 z-20' : 'opacity-0 z-10'
           }`}
           style={{ backgroundImage: `url(${img})` }}
@@ -54,16 +53,16 @@ const BackgroundSlider = () => {
       ))}
 
       {/* Yazılar aşağı sağda, animasiya ilə */}
-      <div className="absolute bottom-30 right-12 z-30 text-right text-white max-w-md">
+      <div className="absolute bottom-10 sm:bottom-16 md:bottom-20 lg:bottom-24 right-4 sm:right-8 lg:right-12 z-30 text-right text-white max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg px-2">
         <h1
-          className={`text-5xl font-extrabold tracking-wider mb-2 transform transition-all duration-700 ease-out ${
+          className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-wider mb-2 transform transition-all duration-700 ease-out ${
             animate ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10"
           }`}
         >
           {texts[currentIndex].title}
         </h1>
         <p
-          className={`text-lg leading-relaxed transform transition-all duration-700 ease-out ${
+          className={`text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed transform transition-all duration-700 ease-out ${
             animate ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10"
           }`}
         >
