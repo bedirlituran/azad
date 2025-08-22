@@ -5,17 +5,17 @@ const ChargingSolutions = () => {
   const solutions = [
     {
       id: 1,
-      title: "Home Charging",
+      title: "Ev Şarjı",
       img: "/images/1.jpg",
     },
     {
       id: 2,
-      title: "Public Stations",
+      title: "İctimai Stansiyalar",
       img: "/images/2.jpg",
     },
     {
       id: 3,
-      title: "Commercial Solutions",
+      title: "Korporativ Həllər",
       img: "/images/3.jpg",
     },
   ];
@@ -24,10 +24,10 @@ const ChargingSolutions = () => {
     <section className="bg-[#0b1320] text-white py-16 px-6">
       <div className="max-w-6xl mx-auto text-center">
         <h4 className="text-green-400 uppercase tracking-wider mb-2">
-          Electric Vehicle
+          Elektrikli Avtomobil
         </h4>
         <h2 className="text-3xl md:text-5xl font-bold leading-snug mb-12">
-          Rev Up the Voltage, Drive <br /> into a Green Horizon
+          Gərginliyi Artır, <br /> Yaşıl Gələcəyə Sür
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -52,14 +52,14 @@ const ChargingSolutions = () => {
                 {item.title} <span className="ml-1">↗</span>
               </div>
 
-              {/* Overlay qara effekt */}
-              <div className="absolute inset-0 bg-opacity-30 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              {/* Overlay effekt */}
+              <div className="absolute inset-0  bg-opacity-30 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             </div>
           ))}
         </div>
 
         <button className="mt-12 px-6 py-3 bg-green-500 hover:bg-green-600 rounded-full text-black font-semibold transition">
-          Read More ↗
+          Ətraflı Bax ↗
         </button>
       </div>
     </section>

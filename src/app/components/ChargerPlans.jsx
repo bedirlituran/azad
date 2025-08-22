@@ -3,38 +3,38 @@ import React from "react";
 export default function ChargingPlans() {
   const plans = [
     {
-      name: "Home Charger",
-      power: "3.5 KW",
-      price: "$129",
+      name: "Ev Şarj Cihazı",
+      power: "3.5 kW",
+      price: "₼129",
       features: [
-        "✓ Up to 60 miles of range per hour",
-        "✓ Free service and updates",
-        "✓ 24/7 professional support",
-        "✓ Mobile app monitoring",
+        "✓ Saatda 60 mil məsafə üçün enerji",
+        "✓ Pulsuz servis və yeniləmələr",
+        "✓ 24/7 peşəkar dəstək",
+        "✓ Mobil tətbiqlə izləmə",
       ],
       popular: false,
     },
     {
-      name: "Public Station",
-      power: "18 KW",
-      price: "$1799",
+      name: "İctimai Stansiya",
+      power: "18 kW",
+      price: "₼1799",
       features: [
-        "✓ Fast charging up to 200 miles/hour",
-        "✓ Free service and updates",
-        "✓ Priority support 24/7",
-        "✓ Smart monitoring system",
+        "✓ Sürətli şarj — saatda 200 milədək",
+        "✓ Pulsuz servis və yeniləmələr",
+        "✓ Prioritet dəstək 24/7",
+        "✓ Ağıllı izləmə sistemi",
       ],
-      popular: true, // bu ən önə çıxan olacaq
+      popular: true, // ən çox seçilən
     },
     {
-      name: "Commercial Pro",
-      power: "50 KW",
-      price: "$4999",
+      name: "Kommersiya Pro",
+      power: "50 kW",
+      price: "₼4999",
       features: [
-        "✓ Ultra-fast charging up to 350 miles/hour",
-        "✓ Free lifetime service",
-        "✓ Dedicated account manager",
-        "✓ Full analytics dashboard",
+        "✓ Ultra sürətli şarj — saatda 350 milədək",
+        "✓ Ömürlük pulsuz servis",
+        "✓ Şəxsi menecer dəstəyi",
+        "✓ Tam analitika paneli",
       ],
       popular: false,
     },
@@ -43,18 +43,18 @@ export default function ChargingPlans() {
   return (
     <section className="bg-gray-50 py-16 px-6">
       <div className="max-w-7xl mx-auto">
-        {/* Top Text Section */}
+        {/* Başlıq hissə */}
         <div className="text-center mb-14">
           <h2 className="text-3xl md:text-5xl font-bold text-gray-800 mb-4">
-            Rent Station and Save Your Money
+            Stansiya İcarə Et və Puluna Qənaət Et
           </h2>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-            Choose the best charging solution for your needs. Whether at home,
-            in public, or for commercial use, we have a plan that suits you.
+            Ehtiyaclarınıza uyğun ən yaxşı şarj həllini seçin. İstər evdə,
+            istər ictimai, istərsə də biznes üçün — bizdə sizə uyğun plan var.
           </p>
         </div>
 
-        {/* Cards Section */}
+        {/* Kartlar hissəsi */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {plans.map((plan, idx) => (
             <div
@@ -64,10 +64,10 @@ export default function ChargingPlans() {
                 plan.popular ? "border-blue-500" : "border-gray-200"
               }`}
             >
-              {/* Popular badge */}
+              {/* Ən çox seçilən nişanı */}
               {plan.popular && (
                 <span className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-blue-600 text-white text-xs px-4 py-1 rounded-full shadow-md">
-                  Most Popular
+                  Ən Çox Seçilən
                 </span>
               )}
 
@@ -76,7 +76,7 @@ export default function ChargingPlans() {
                   {plan.name}
                 </h3>
                 <p className="text-sm text-gray-500 text-center mb-4">
-                  Power: <span className="font-medium">{plan.power}</span>
+                  Güc: <span className="font-medium">{plan.power}</span>
                 </p>
                 <p className="text-4xl font-bold text-blue-600 text-center mb-6">
                   {plan.price}
@@ -95,7 +95,7 @@ export default function ChargingPlans() {
                     : "bg-gray-200 text-gray-700 hover:bg-gray-300"
                 }`}
               >
-                {plan.popular ? "Get Started" : "Read More"}
+                {plan.popular ? "Başla" : "Ətraflı Bax"}
               </button>
             </div>
           ))}

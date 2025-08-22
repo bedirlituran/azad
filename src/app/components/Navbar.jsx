@@ -11,12 +11,12 @@ const Navbar = () => {
           <div className="w-2 h-6 bg-lime-400"></div>
           <div className="w-2 h-6 bg-yellow-400"></div>
         </div>
-        <span className="font-bold text-lg text-black">EQUANT</span>
+        <span className="font-bold text-lg text-black">LOGO</span>
       </div>
 
       {/* Menu Links */}
       <ul className="flex space-x-8 text-sm font-medium">
-        {["Home", "About Us", "Products", "Blog", "Contacts"].map((item, index) => (
+        {["Ana Səhifə", "Haqqımızda", "Məhsullar", "Stansiyalar", "Əlaqə"].map((item, index) => (
           <li
             key={index}
             className="flex items-center space-x-1 text-gray-700 hover:text-green-500 cursor-pointer"

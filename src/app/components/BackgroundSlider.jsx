@@ -5,17 +5,25 @@ const images = [
   '/images/banner-01.jpg',
   '/images/bg-01.jpg',
 ];
-
 const texts = [
   {
-    title: "EQUANT",
-    description: "These vehicles, powered by electricity."
+    title: "Sürətli Şarj",
+    description: "Elektrikli avtomobilinizi cəmi bir neçə dəqiqəyə doldurun."
   },
   {
-    title: "EQUANT",
-    description: "Sustainable energy solutions are vital for protecting the environment."
+    title: "Ağıllı Enerji",
+    description: "Daha az xərc, daha çox yol – ekoloji təmiz güc."
+  },
+  {
+    title: "Hər Yerdə Şarj",
+    description: "Şəhərdə və yolda – enerji məntəqələri həmişə yanınızda."
+  },
+  {
+    title: "Yaşıl Texnologiya",
+    description: "Təmiz enerji ilə həm gələcəyi, həm də büdcənizi qoruyun."
   }
 ];
+
 
 const BackgroundSlider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -55,7 +63,7 @@ const BackgroundSlider = () => {
           {texts[currentIndex].title}
         </h1>
         <p
-          className={`text-sm leading-relaxed transform transition-all duration-700 ease-out ${
+          className={`text-lg leading-relaxed transform transition-all duration-700 ease-out ${
             animate ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10"
           }`}
         >

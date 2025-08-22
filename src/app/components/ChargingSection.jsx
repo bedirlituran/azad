@@ -9,7 +9,7 @@ export default function ChargingSection() {
         <div className="w-full">
           <Image
             src="/images/car-charging.jpg" // öz şəkil yolunu buraya yaz
-            alt="Electric Car Charging"
+            alt="Elektrikli Avtomobilin Şarjı"
             width={600}
             height={400}
             className="rounded-lg object-cover w-full h-auto"
@@ -19,20 +19,20 @@ export default function ChargingSection() {
         {/* Text Content */}
         <div>
           <p className="text-emerald-400 uppercase text-xs tracking-widest mb-2">
-            Electric vehicle
+            Elektrikli avtomobil
           </p>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-snug mb-4">
-            Charging into the Future — <br /> Silent Power Unleashed
+            Gələcəyə Doğru Şarj — <br /> Səssiz Güc Azadlığı
           </h2>
           <p className="text-gray-500 text-base mb-8">
-            Public charging stations play a crucial role in supporting electric
-            vehicle adoption by providing drivers with access to charging
-            infrastructure while away from home or work.
+            İctimai şarj məntəqələri elektrikli avtomobillərin yayılmasında
+            mühüm rol oynayır. Onlar sürücülərə evdən və işdən kənarda da
+            enerji doldurma imkanı təqdim edir.
           </p>
 
           {/* Button */}
           <button className="bg-emerald-400 hover:bg-emerald-500 transition text-black font-medium px-6 py-3 rounded-full flex items-center gap-2">
-            Read More <ArrowUpRight className="w-4 h-4" />
+            Ətraflı Oxu <ArrowUpRight className="w-4 h-4" />
           </button>
         </div>
       </div>

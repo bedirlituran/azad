@@ -5,23 +5,23 @@ export default function ElectricVehicleSection() {
   const features = [
     {
       icon: <Bolt className="text-emerald-400 w-8 h-8" />,
-      title: "High Quality Stations",
-      desc: "Workplace charging not only supports employees who drive electric cars",
+      title: "Yüksək Keyfiyyətli Stansiyalar",
+      desc: "İş yerlərində şarj imkanları elektrikli avtomobil sürücülərinə əlavə rahatlıq yaradır.",
     },
     {
       icon: <PlugZap className="text-emerald-400 w-8 h-8" />,
-      title: "Quick Installations",
-      desc: "Many electric utilities offer incentives or rebates to encourage the installation",
+      title: "Sürətli Quraşdırma",
+      desc: "Bir çox enerji şirkətləri şarj məntəqələrinin quraşdırılmasını dəstəkləmək üçün güzəştlər təqdim edir.",
     },
     {
       icon: <Cable className="text-emerald-400 w-8 h-8" />,
-      title: "Accessories Store",
-      desc: "As electric cars become increasingly popular, understanding the nuances of charging",
+      title: "Aksesuar Mağazası",
+      desc: "Elektrikli avtomobillərin populyarlığı artdıqca, şarj prosesinin incəliklərini anlamaq vacibdir.",
     },
     {
       icon: <BatteryCharging className="text-emerald-400 w-8 h-8" />,
-      title: "Renewable Energy",
-      desc: "By understanding the various charging options and best practices, electric car",
+      title: "Bərpa Olunan Enerji",
+      desc: "Müxtəlif şarj üsullarını və ən yaxşı təcrübələri öyrənərək daha ekoloji və qənaətli seçim edin.",
     },
   ];
 
@@ -30,16 +30,16 @@ export default function ElectricVehicleSection() {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <p className="text-emerald-400 uppercase text-xs tracking-widest mb-2">
-          Electric vehicle
+          Elektrikli avtomobil
         </p>
         <div className="lg:flex lg:justify-between lg:items-start gap-10">
           <h2 className="text-white text-3xl md:text-4xl font-bold leading-snug max-w-xl">
-            Driving Tomorrow Today: <br /> The Electric Evolution
+            Sabahı Bu Gündən Sür: <br /> Elektrikli İnqilab
           </h2>
           <p className="text-gray-300 text-sm max-w-lg mt-4 lg:mt-0">
-            Practices such as avoiding occupying a charging space longer than
-            necessary, adhering to posted time limits, and being mindful of
-            charging station etiquette can help ensure.
+            Lazım olduğundan artıq şarj məntəqəsini tutmamaq, vaxt limitlərinə
+            riayət etmək və ümumi etik qaydalara əməl etmək hər kəs üçün rahat
+            istifadəni təmin edir.
           </p>
         </div>
 

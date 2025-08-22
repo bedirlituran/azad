@@ -9,7 +9,7 @@ const SwipeUpButton = () => {
   return (
     <div
       onClick={scrollToTop}
-      className="fixed bottom-5 right-5 bg-black/60 text-white px-4 py-6 rounded-full text-sm cursor-pointer z-20 hover:bg-black/80 transition"
+      className="fixed bottom-10 right-10 bg-green-400 text-green-900 px-4 py-6 rounded-full text-sm cursor-pointer z-20 hover:bg-black/80 transition"
     >
       ⬆ Yuxarı sürüşdür
     </div>
