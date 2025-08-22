@@ -2,9 +2,12 @@
 import React, { useEffect, useState } from 'react';
 
 const images = [
-  '/images/banner-01.jpg',
+  '/images/SLIDE_01.jpg',
   '/images/bg-01.jpg',
+  '/images/SLIDE_02.jpg',
+  '/images/SLIDE_03.jpg',
 ];
+
 const texts = [
   {
     title: "Sürətli Şarj",
@@ -26,16 +29,19 @@ const texts = [
 
 const BackgroundSlider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [animate, setAnimate] = useState(false);
+  const [animate, setAnimate] = useState(true);
 
   useEffect(() => {
     const interval = setInterval(() => {
+      // əvvəl yazını və şəkili yavaşca yox et
       setAnimate(false);
+
+      // qısa gecikmə ilə növbəti slide və yazı göstər
       setTimeout(() => {
         setCurrentIndex(prev => (prev + 1) % images.length);
         setAnimate(true);
-      }, 100);
-    }, 3000);
+      }, 300); // burada 0.3 saniyə gecikmə əlavə etdik
+    }, 4000); // hər 4 saniyədən bir dəyişsin
 
     return () => clearInterval(interval);
   }, []);
@@ -52,7 +58,7 @@ const BackgroundSlider = () => {
         />
       ))}
 
-      {/* Yazılar aşağı sağda, animasiya ilə */}
+      {/* Yazılar */}
       <div className="absolute bottom-10 sm:bottom-16 md:bottom-20 lg:bottom-24 right-4 sm:right-8 lg:right-12 z-30 text-right text-white max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg px-2">
         <h1
           className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-wider mb-2 transform transition-all duration-700 ease-out ${
