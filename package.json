@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "framer-motion": "^12.23.12",
     "lucide-react": "^0.539.0",
     "lucide-react-native": "^0.539.0",
     "nativewind": "^4.1.23",

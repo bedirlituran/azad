@@ -1,9 +1,26 @@
 "use client"
 import React, { useState } from "react";
+import Link from "next/link";
 import { FaUser, FaShoppingBag, FaSearch, FaBars, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const menuItems = [
+    { name: "Ana Səhifə", href: "/" },
+    { name: "Haqqımızda", href: "/about" },
+    { name: "Məhsullar", href: "#", scrollTo: "ProductGrid" }, // <- scroll ID
+    { name: "Stansiyalar", href: "/stations" },
+    { name: "Əlaqə", href: "/contact" },
+  ];
+
+  const handleScroll = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+    setMenuOpen(false);
+  };
 
   return (
     <nav className="flex justify-between items-center px-4 sm:px-6 lg:px-12 py-4 shadow-md bg-white relative z-50">
@@ -19,12 +36,17 @@ const Navbar = () => {
 
       {/* Menu Links - hidden on small screens */}
       <ul className="hidden md:flex space-x-6 text-sm sm:text-base font-medium">
-        {["Ana Səhifə", "Haqqımızda", "Məhsullar", "Stansiyalar", "Əlaqə"].map((item, index) => (
+        {menuItems.map((item, index) => (
           <li
             key={index}
             className="flex items-center space-x-1 text-gray-700 hover:text-green-500 cursor-pointer"
+            onClick={() => item.scrollTo && handleScroll(item.scrollTo)}
           >
-            <span>{item}</span>
+            {item.scrollTo ? (
+              <span>{item.name}</span>
+            ) : (
+              <Link href={item.href}>{item.name}</Link>
+            )}
             <span>↗</span>
           </li>
         ))}
@@ -50,13 +72,13 @@ const Navbar = () => {
       {/* Mobile menu */}
       {menuOpen && (
         <ul className="absolute top-full left-0 w-full bg-white shadow-md flex flex-col items-center space-y-4 py-4 md:hidden z-20">
-          {["Ana Səhifə", "Haqqımızda", "Məhsullar", "Stansiyalar", "Əlaqə"].map((item, index) => (
+          {menuItems.map((item, index) => (
             <li
               key={index}
               className="flex items-center space-x-1 text-gray-700 hover:text-green-500 cursor-pointer"
-              onClick={() => setMenuOpen(false)}
+              onClick={() => item.scrollTo ? handleScroll(item.scrollTo) : setMenuOpen(false)}
             >
-              <span>{item}</span>
+              {item.scrollTo ? <span>{item.name}</span> : <Link href={item.href}>{item.name}</Link>}
               <span>↗</span>
             </li>
           ))}

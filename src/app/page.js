@@ -16,13 +16,16 @@ export default function Home() {
            <BackgroundSlider>
       <h1 className="text-4xl font-bold mb-4">Electric Car Charging Points</h1>
       <p className="text-lg">Modern electric vehicle charging systems.</p>
-      <SwipeUpButton />
     </BackgroundSlider>
+    <SwipeUpButton/>
     <ElectricVehicleSection/>
     <ChargingSection/>
     <ChargingStations/>
     <ChargingSolutions/>
+    <div id = 'ProductGrid'>
     <ProductGrid/>
+
+    </div>
     <ChargerPlans/>
 <Footer/>
       </div>
